@@ -17,11 +17,13 @@ export default function App() {
       if (!username) {
         return;
       }
-      
+
       const githubFolowers = await fetch(`https://api.github.com/users/${username}/followers`);
       const data = await githubFolowers.json();
 
       setFollowers(data);
+
+      document.title = `Folowers of ${username}`;
     } catch (err) {
       setFollowers([]);
     } 
