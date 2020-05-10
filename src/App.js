@@ -31,7 +31,8 @@ export default function App() {
 
   return (
     <>
-      <input type="text" placeholder="username" value={username} onChange={handleChange}/> <button onClick={handleFollowers}>Followers</button>
+      <input type="text" placeholder="username" value={username} onChange={handleChange}/>
+      <button onClick={handleFollowers}>Followers</button>
       <ul>
         {followers.map(folower => (
           <li key={folower.id}>
